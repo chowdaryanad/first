@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="ecommercebybaba.css">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+$(document).ready(function(){
+
+$('#content_left_menu> ul > li ul').each(function(index, e){
+  var count = $(e).find('li').length;
+  var content = '<span class="cnt">' + count + '</span>';
+  $(e).closest('li').children('a').append(content);
+});
+$('#content_left_menuul ul li:odd').addClass('odd');
+$('#content_left_menuul ul li:even').addClass('even');
+$('#content_left_menu> ul > li > a').click(function() {
+  $('#content_left_menuli').removeClass('active');
+  $(this).closest('li').addClass('active');	
+  var checkElement = $(this).next();
+  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+    $(this).closest('li').removeClass('active');
+    checkElement.slideUp('normal');
+  }
+  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+    $('#content_left_menuul ul:visible').slideUp('normal');
+    checkElement.slideDown('normal');
+  }
+  if($(this).closest('li').find('ul').children().length == 0) {
+    return true;
+  } else {
+    return false;	
+  }		
+});
+});
+});
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <div class="main">
+        <div class="header">
+            
+            <div class="header-left">
+                <a class="header-left"href="#" target="_self">
+                    <img style="height: 100px;" src="c1929d3492c2f64ab65b43808c072043.jpg" alt="">
+                </a>
+            </div>
+            <div class="header-right">
+                <!--<a href="#"><input type="text" class="form" placeholder="Search Product"><img src="images/search.png" /></a>-->
+                <div class="header-right-top">
+                    <ul>
+                        <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href=""><ion-icon name="logo-google"></ion-icon></a></li>
+                        <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    </ul>
+                </div>
+                <div class="header-right-bottom">
+                    <div class="header-right-bottom-left">
+                        <a href="#"><input type="text" class="form" placeholder="Search Product"><ion-icon size="large" name="search-outline"></ion-icon></a>
+                    </div>
+                    <div class="header-right-bottom-center">
+                        <ul>
+                            <li><a href="F:\login-form\index.html">Log in</a></li>
+                            <li style="border-right:none;"><a href="F:\practical-1\ecommerce.html\register.html">Register</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-right-bottom-right">
+                        <i class="fa fa-cart-plus" style="color:#df001a; font-size:35px; padding-bottom: 5px;"><ion-icon name="cart-outline"></ion-icon></i> &nbsp; 
+                        <i class="fa fa-inr" style="color:#000; font-size:40px;"></i> ₹1569 /-
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="ftl_menu">
+            <ul id="navbar">
+               <li><a href="#!">Home</a></li>
+               <li><a href="#">Men &nbsp;</a>
+                    <ul>
+                        <li><a href="#!">&nbsp; Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Women  &nbsp;</a>
+                    <ul>
+                        <li><a href="#!">&nbsp; Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Kids's &nbsp;</a>
+                    <ul>
+                        <li><a href="#!">&nbsp; Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                    </ul>
+                </li>
+               <li><a href="#">Home & Living &nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="#!">&nbsp; Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Top Brands &nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="#!">&nbsp; Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                        <li><a href="#!"> Barnd Name</a></li>
+                    </ul>
+                </li>
+                <li><a href="#!">Products</a></li>
+                <li><a href="#!">Services</a></li>
+                <li><a href="#!">Gallery</a></li>
+                <li><a href="#!">Branches</a></li>
+                <li class="pad"></li>
+            </ul>
+        </div>
+        <div class="slider">
+            <marquee scrollamount="22s" hspace="30%" onmouseover='this.stop()' onmouseout='this.start()'>
+                <img src="38514ad9fd653d6bcce27ed2380a5295.jpg" alt="image">
+                <img src="2af65f12d120f80c3d173daf8288e11e.jpg" alt="">
+                <img src="5c640637aa7a0282966fdf2cf39926b1.jpg" alt="">
+                
+            </marquee>
+            
+         </div>
+         <div class="content">
+
+            <div class="content-left">
+                <div id='content_left_menu'>
+                <div class="categories">All Categories</div>
+                <ul>
+                    <li class='has-sub'><a href='#'><span>Featured brands</span></a>
+                      <ul>
+                         <li><a href='#'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                      </ul>
+                   </li>
+                    <li class='has-sub'><a href='#'><span>Shirts</span></a>
+                      <ul>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                      </ul>
+                   </li>
+                   <li class='has-sub'><a href='#'><span>Trousers</span></a>
+                      <ul>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                      </ul>
+                   </li>
+                   <li class='has-sub'><a href=' '><span>Infant Essintials</span></a>
+                      <ul>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                      </ul>
+                   </li>
+                   <li class='has-sub'><a href='#'><span>Waches</span></a>
+                      <ul>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                         <li><a href='#!'><span>Lorem Ipsum</span></a></li>
+                      </ul>
+                   </li>
+                   <li><a href='#'><span>Jewellery</span></a></li>
+                   <li><a href='#'><span>Flip-flops</span></a></li>
+                   <li><a href='#'><span>Leather Shoes</span></a></li>
+                   <li><a href='#'><span>Jeans</span></a></li>
+                   <li><a href="#"><span>Fashion</span></a></li>
+                   <li><a href="#"><span>Dhoties</span></a></li>
+                   <li><a href="#"><span>Hand bags</span></a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="content-right">
+                 <div class="categories-right">All Products</div>
+                <div align="center">
+                    <div id='abc' class="content-right-product">
+                        <div><img src="shirt1.jpg" width="270" height="200"></div>
+                        <div class="content-right-product-h4">Lorem Ipsum</div>
+                        <div class="content-right-product-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        <div class="content-right-product-amount"><i style="color:#df001a;"></i> ₹1500.00 <br>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="cart" align="center"><a href="" class="btn">Add to Cart</a></div>
+                    </div>
+                    <div class="content-right-product">
+                        <div><img src="images/2.jpg" width="270" height="200"></div>
+                         <div class="content-right-product-h4">Lorem Ipsum</div>
+                        <div class="content-right-product-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        <div class="content-right-product-amount"><i class="fa fa-inr" style="color:#df001a;"></i> ₹2159.00 <br>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="cart" align="center"><a href="" class="btn">Add to Cart</a></div>
+                    </div>
+                    <div class="content-right-product">
+                        <div><img src="images/3.jpg" width="270" height="200"></div>
+                         <div class="content-right-product-h4">Lorem Ipsum</div>
+                        <div class="content-right-product-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        <div class="content-right-product-amount"><i style="color:#df001a;"></i> ₹4999.00 <br>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="cart" align="center"><a href="" class="btn">Add to Cart</a></div>
+                    </div>
+                </div>
+                <div align="center">
+                    <div class="content-right-product">
+                        <div><img src="images/4.jpg" width="270" height="200"></div>
+                        <div class="content-right-product-h4">Lorem Ipsum</div>
+                        <div class="content-right-product-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        <div class="content-right-product-amount"><i style="color:#df001a;"></i> ₹2599.00 <br>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="cart" align="center"><a href="" class="btn">Add to Cart</a></div>
+                    </div>
+                    <div class="content-right-product">
+                        <div><img src="images/5.jpg" width="270" height="200"></div>
+                         <div class="content-right-product-h4">Lorem Ipsum</div>
+                        <div class="content-right-product-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        <div class="content-right-product-amount"><i style="color:#df001a;"></i> ₹2999.00 <br>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="cart" align="center"><a href="" class="btn">Add to Cart</a></div>
+                    </div>
+                    <div class="content-right-product">
+                        <div><img src="images/6.jpg" width="270" height="200"></div>
+                         <div class="content-right-product-h4">Lorem Ipsum</div>
+                        <div class="content-right-product-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                        <div class="content-right-product-amount"><i style="color:#df001a;"></i>₹1990.00 <br>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star-half-outline"></ion-icon>
+                        </div>
+                        <div class="cart" align="center"><a href="" class="btn">Add to Cart</a></div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div class="footer">
+            <div class="footer-parts">
+                <div class="footer-parts-h4">About Us</div>
+                <div class="about-footer">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+            </div>
+            <div class="footer-parts">
+                <div class="footer-parts-h4">Extra Links</div>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-parts">
+                <div class="footer-parts-h4">Extra Links</div>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Diclimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-parts">
+                <div class="footer-parts-h4">Social Links</div><br />
+                <div style="padding-left:75px; font-size:22px; ">
+                    <a href="#" target="_blank"><i><ion-icon name="logo-facebook"></ion-icon></i></a> &nbsp; &nbsp;
+                    <a href="#" target="_blank"><i><ion-icon name="logo-linkedin"></ion-icon></i></a> &nbsp; &nbsp;
+                    <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></i></a> &nbsp; &nbsp;
+                    <a href="#" target="_blank"><i><ion-icon name="logo-google-playstore"></ion-icon></i></a>
+                </div>
+                <div style="padding-left:20px; padding-top:15px; font-size:22px;">
+                    <form action="" method="post">
+                        <a href="#!"><input type="text" class="form-2" placeholder="Subscribe"><ion-icon size="large" name="search-circle-outline"></ion-icon></a>
+                    </form>
+                </div>
+            </div>
+            
+    
+        </div>
+
+
+    </div>
+
+</body>
+</html>
